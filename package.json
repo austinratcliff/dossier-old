@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "staging": "git checkout staging && git merge master && git push && git checkout master"
   },
   "repository": {
     "type": "git",
