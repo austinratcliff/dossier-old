@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, '/client/build')))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-mongoose.connect('mongodb://localhost:27017/dossier', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/dossier', { useNewUrlParser: true, useUnifiedTopology: true })
 const testSchema = new mongoose.Schema({ test: String })
 const Test = mongoose.model('Test', testSchema)
 
