@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "staging": "git checkout staging && git merge master && git push && git checkout master"
+    "staging": "git checkout staging && git merge master && git push && git checkout master",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "repository": {
     "type": "git",
