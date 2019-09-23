@@ -14,6 +14,7 @@
     "eject": "react-scripts eject",
     "staging": "git checkout staging && git merge master && git push && git checkout master"
   },
+  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": "react-app"
   },

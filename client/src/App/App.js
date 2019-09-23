@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import logo from '../logo.svg'
 import './App.css'
 
 const App = () => {
+  const [tests, setTests] = useState([])
+
+  useEffect(() => {
+    fetch('/api/test')
+      .then(res => res.json())
+      .then(tests => setTests(tests))
+      .catch(err => console.log(err))
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +27,9 @@ const App = () => {
         >
           Learn React
         </a>
+        {
+          tests.map(test => <p key={test._id}>{test.test}</p>)
+        }
       </header>
     </div>
   )
