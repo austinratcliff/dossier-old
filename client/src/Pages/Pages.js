@@ -5,6 +5,7 @@ import About from './About/About'
 import Blog from './Blog/Blog'
 import Contact from './Contact/Contact'
 import Projects from './Projects/Projects'
+import './Pages.css'
 
 class Pages extends Component {
   constructor() {
