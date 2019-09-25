@@ -1,7 +1,7 @@
 import React from 'react'
 import './Contact.css'
 
-const Contact = () => {
+const Contact = props => {
   return (
     <div className="Contact">
       <h1 className="header">
@@ -13,6 +13,7 @@ const Contact = () => {
       <i
         className="fas fa-angle-down fa-2x home"
         title="home"
+        onClick={props.handleClick}
       />
     </div>
   )

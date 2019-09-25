@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
 
-const About = () => {
+const About = props => {
   return (
     <div className="About">
       <h1 className="header">
@@ -13,6 +13,7 @@ const About = () => {
       <i
         className="fas fa-angle-up fa-2x home"
         title="home"
+        onClick={props.handleClick}
       />
     </div>
   )
