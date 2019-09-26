@@ -9,11 +9,53 @@
   font-family: 'IBM Plex Mono', monospace;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .Contact .header {
+  position: absolute;
   font-size: calc(10px + 5vmin);
   margin: 0;
+  animation: slide-down 1.5s 1.5s 1 forwards;
+}
+
+.Contact .message {
+  transform: translate(-5vw, 0);
+  font-size: calc(10px + 2vmin);
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  animation: fade-in-right 1s 2s 1 forwards;
+}
+
+.Contact .contacts {
+  transform: translate(5vw, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 0 0;
+  opacity: 0;
+  visibility: hidden;
+  animation: fade-in-left 1s 2s 1 forwards;
+}
+
+.Contact .icon {
+  margin: 0 10px 0 20px;
+}
+
+.Contact .contact {
+  color: #111;
+  font-size: calc(10px + 1vmin);
+  text-decoration: none;
+}
+
+.Contact .highlight {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #92A8D1 50%);
+  padding: 0 5px;
+}
+
+.Contact .highlight-hover:hover {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #92A8D1 50%);
 }
 
 .Contact .home {
@@ -21,4 +63,33 @@
   top: 0;
   margin-top: 25px;
   cursor: pointer;
+  animation: bounce-up 1s infinite alternate;
 }
+
+.Contact .home:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slide-down {
+  from {transform: translateY(0);}
+  to {transform: translateY(100vh);}
+}
+
+@keyframes fade-in-right {
+  from {transform: translate(-5vw, 0); opacity: 0; visibility: hidden;}
+  to {transform: translate(0); opacity: 1; visibility: visible;}
+}
+
+@keyframes fade-in-left {
+  from {transform: translate(5vw, 0); opacity: 0; visibility: hidden;}
+  to {transform: translate(0); opacity: 1; visibility: visible;}
+}
+
+@keyframes bounce-up {
+  from {margin-top: 25px;}
+  to {margin-top: 15px;}
+}
+
+/*
+TODO: Add mobile responsive design
+*/
