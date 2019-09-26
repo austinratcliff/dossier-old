@@ -12,28 +12,34 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/dossier', { useNewUrlParser: true, useUnifiedTopology: true })
-const testSchema = new mongoose.Schema({ test: String })
-const Test = mongoose.model('Test', testSchema)
+const projectSchema = new mongoose.Schema({
+  name: String,
+  description: String,
+  projectURL: String,
+  githubURL: String,
+  badges: Array
+})
+const Project = mongoose.model('Project', projectSchema)
 
 app.get('/api', (req, res) => {
-  res.send("<form action='/api/test' method='POST'><input type='text' name='test' /><input type='submit' value='Submit' /></form>")
+  res.send("<form action='/api/projects' method='POST'><input type='text' name='name' placeholder='Name' /><input type='text' name='description' placeholder='Description' /><input type='text' name='projectURL' placeholder='Project URL' /><input type='text' name='githubURL' placeholder='GitHub URL' /><input type='checkbox' name='badges[]' value='BADGE' /><input type='submit' value='Add' /></form>")
 })
 
-app.post('/api/test', (req, res) => {
-  const testData = new Test(req.body)
-  testData.save()
+app.post('/api/projects', (req, res) => {
+  const projectData = new Project(req.body)
+  projectData.save()
     .then(() => {
-      console.log(testData)
-      res.redirect('/api')
+      console.log(projectData)
+      res.redirect('/')
     })
     .catch(err => {
       console.log(err)
     })
 })
 
-app.get('/api/test', (req, res) => {
-  Test.find({}, (err, tests) => {
-    return res.end(JSON.stringify(tests))
+app.get('/api/projects', (req, res) => {
+  Project.find({}, (err, projects) => {
+    return res.end(JSON.stringify(projects))
   })
 })
 
