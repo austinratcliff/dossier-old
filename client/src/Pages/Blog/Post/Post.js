@@ -9,6 +9,12 @@ const Post = props => {
   const handleShow = () => setShow({ ...show, [props.post.id]: true })
   const handleHide = () => setShow({ ...show, [props.post.id]: false })
 
+  const date = new Date(props.post.published_at)
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  const month = months[date.getMonth()]
+  const day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate()
+  const year = date.getFullYear()
+
   return (
     <div className="Post">
       <h2
@@ -20,7 +26,7 @@ const Post = props => {
         </span>
       </h2>
       <p className="date">
-        {props.post.published_at}
+        {month + ' ' + day + ', ' + year}
       </p>
       <Modal
         show={show[props.post.id]}
