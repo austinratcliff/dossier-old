@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Post from './Post/Post'
 import './Blog.css'
 
 const Blog = props => {
@@ -25,7 +26,17 @@ const Blog = props => {
       </h1>
       {
         posts.length > 0
-          ? posts.map(post => <p key={post.id}>{post.title}</p>).slice(0, 5)
+          ? <div className="posts">
+              { posts.map(post => <Post key={post.id} post={post} />).slice(0, 5) }
+              <a
+                className="dev-to"
+                href="https://dev.to/austinratcliff/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                READ MORE AT DEV.TO
+              </a>
+            </div>
           : <h2 className="zero-posts">
               <span className="highlight">
                 No posts yet...

@@ -1,0 +1,88 @@
+.Post {
+  font-family: 'IBM Plex Mono', monospace;
+  margin-top: 25px;
+}
+
+.Post:last-child {
+  margin-bottom: 25px;
+}
+
+.Post .title {
+  font-size: calc(10px + 2vmin);
+  margin: 0;
+}
+
+.Post .date {
+  font-size: calc(10px + 1vmin);
+  margin: 0;
+}
+
+.Post .highlight-hover:hover {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #92A8D1 50%);
+  cursor: pointer;
+}
+
+.modal-backdrop {
+  background-color: #111 !important;
+}
+
+.modal-content {
+  border: 3px solid #111 !important;
+  border-radius: 0 !important;
+  background-color: white !important;
+  color: #111 !important;
+}
+
+.modal-header {
+  border-bottom: 3px solid #111 !important;
+  font-family: 'Ibm Plex Mono', monospace !important;
+}
+
+.modal-body {
+  font-family: 'IBM Plex Sans', sans-serif !important;
+}
+
+.modal-body h1,
+.modal-body h2,
+.modal-body h3,
+.modal-body h4,
+.modal-body h5,
+.modal-body h6 {
+  font-family: 'Ibm Plex Mono', monospace !important;
+}
+
+.modal-body a {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #92A8D1 50%) !important;
+  color: #111 !important;
+}
+
+.modal-body a:hover {
+  color: #111 !important;
+  text-decoration: none !important;
+}
+
+.modal-body img {
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.modal-body pre {
+  border: 1px solid #111 !important;
+  background-color: #111 !important;
+  color: white !important;
+  font-weight: bold !important;
+  letter-spacing: 1.5px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-self: center !important;
+  width: 100% !important;
+  padding: 15px 0 !important;
+}
+
+.modal-body code {
+  font-family: 'Ibm Plex Mono', monospace !important;
+}
+
+.modal-body::-webkit-scrollbar {
+  display: none !important;
+}

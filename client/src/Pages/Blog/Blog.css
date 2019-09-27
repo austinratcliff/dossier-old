@@ -19,6 +19,31 @@
   animation: slide-left 1.5s 1.5s 1 forwards;
 }
 
+.Blog .posts {
+  border-left: 3px solid #111;
+  text-align: left;
+  display: flex;
+  flex-flow: column;
+  padding-left: 25px;
+  opacity: 0;
+  visibility: hidden;
+  animation: fade-in 1s 2s 1 forwards;
+}
+
+.Blog .dev-to {
+  color: #92A8D1;
+  font-size: calc(10px + 1vmin);
+  font-weight: bold;
+  align-self: flex-start;
+  margin: 25px 0;
+  text-decoration: none;
+  transition: margin 0.5s;
+}
+
+.Blog .dev-to:hover {
+  margin-left: 10px;
+}
+
 .Blog .zero-posts {
   font-size: calc(10px + 2vmin);
   margin: 0;

@@ -3,5 +3,17 @@
 exports[`Post component matches snapshot 1`] = `
 <div
   className="Post"
-/>
+>
+  <h2
+    className="title"
+    onClick={[Function]}
+  >
+    <span
+      className="highlight-hover"
+    />
+  </h2>
+  <p
+    className="date"
+  />
+</div>
 `;
