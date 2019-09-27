@@ -19,6 +19,17 @@
   animation: slide-right 1.5s 1.5s 1 forwards;
 }
 
+.Projects .projects {
+  border-left: 3px solid #111;
+  text-align: left;
+  display: flex;
+  flex-flow: column;
+  padding-left: 25px;
+  opacity: 0;
+  visibility: hidden;
+  animation: fade-in 1s 2s 1 forwards;
+}
+
 .Projects .zero-projects {
   font-size: calc(10px + 2vmin);
   margin: 0;

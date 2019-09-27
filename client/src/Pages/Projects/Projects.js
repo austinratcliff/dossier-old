@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Project from './Project/Project'
 import './Projects.css'
 
 const Projects = props => {
@@ -21,7 +22,9 @@ const Projects = props => {
       </h1>
       {
         projects.length > 0
-          ? projects.map(project => <p key={project._id}>{project.name}</p>)
+          ? <div className="projects">
+              { projects.map(project => <Project key={project._id} project={project} />) }
+            </div>
           : <h2 className="zero-projects">
               <span className="highlight">
                 No projects yet...

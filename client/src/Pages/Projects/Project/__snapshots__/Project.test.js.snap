@@ -3,5 +3,14 @@
 exports[`Project component matches snapshot 1`] = `
 <div
   className="Project"
-/>
+>
+  <h2
+    className="name"
+    onClick={[Function]}
+  >
+    <span
+      className="highlight-hover"
+    />
+  </h2>
+</div>
 `;
