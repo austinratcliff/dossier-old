@@ -9,10 +9,4 @@ describe('Admin component', () => {
     ReactDOM.render(<Admin />, div)
     ReactDOM.unmountComponentAtNode(div)
   })
-
-  it('matches snapshot', () => {
-    const component = ReactTestRenderer.create(<Admin />)
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
-  })
 })
