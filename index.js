@@ -3,6 +3,7 @@ const express = require('express')
 const path = require('path')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const herokuSslRedirect = require('heroku-ssl-redirect')
 const app = express()
 const port = process.env.PORT || 5000
 
@@ -10,6 +11,8 @@ app.use(express.static(path.join(__dirname, '/client/build')))
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+
+app.use(herokuSslRedirect())
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/dossier', { useNewUrlParser: true, useUnifiedTopology: true })
 const projectSchema = new mongoose.Schema({
