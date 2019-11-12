@@ -9,10 +9,4 @@ describe('Home component', () => {
     ReactDOM.render(<Home />, div)
     ReactDOM.unmountComponentAtNode(div)
   })
-
-  it('matches snapshot', () => {
-    const component = ReactTestRenderer.create(<Home />)
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
-  })
 })
