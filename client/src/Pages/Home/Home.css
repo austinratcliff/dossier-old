@@ -12,33 +12,6 @@
   z-index: 0;
 }
 
-.Home .navbar {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-.Home .navbar-toggler {
-  color: white !important;
-  border: none !important;
-  margin: 20px 0!important;
-}
-
-.Home .navbar-toggler:focus {
-  outline: none !important;
-}
-
-.Home .navbar-collapse {
-  transition: none !important;
-}
-
-.Home .navbar-nav {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: space-around !important;
-  align-items: center !important;
-}
-
 .Home .icon {
   cursor: pointer;
 }
@@ -54,20 +27,6 @@
 }
 
 @media (min-width: 992px) {
-  .Home .navbar {
-    position: absolute !important;
-    height: 100vh !important;
-    width: 100vw !important;
-  }
-
-  .Home .navbar-nav {
-    height: 100vh !important;
-    width: 100vw !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
   .Home .icon {
     position: absolute;
   }
