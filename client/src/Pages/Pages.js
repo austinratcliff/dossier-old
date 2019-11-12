@@ -18,7 +18,8 @@ class Pages extends Component {
         blog: false,
         contact: false,
         projects: false
-      }
+      },
+      isMobile: window.innerWidth < 992
     }
 
     this.handleClick = this.handleClick.bind(this)
@@ -37,6 +38,10 @@ class Pages extends Component {
   }
 
   render() {
+    window.addEventListener('resize', () => {
+      this.setState({ isMobile: window.innerWidth < 992 })
+    })
+
     return (
       <div className="Pages">
         <Home handleClick={this.handleClick} />
@@ -54,7 +59,7 @@ class Pages extends Component {
           timeout={1000}
           unmountOnExit
         >
-          <Blog handleClick={this.handleClick} />
+          <Blog handleClick={this.handleClick} isMobile={this.state.isMobile} />
         </CSSTransition>
         <CSSTransition
           classNames="contact"
@@ -62,7 +67,7 @@ class Pages extends Component {
           timeout={1000}
           unmountOnExit
         >
-          <Contact handleClick={this.handleClick} />
+          <Contact handleClick={this.handleClick} isMobile={this.state.isMobile} />
         </CSSTransition>
         <CSSTransition
           classNames="projects"
@@ -70,7 +75,7 @@ class Pages extends Component {
           timeout={1000}
           unmountOnExit
         >
-          <Projects handleClick={this.handleClick} />
+          <Projects handleClick={this.handleClick} isMobile={this.state.isMobile} />
         </CSSTransition>
       </div>
     )

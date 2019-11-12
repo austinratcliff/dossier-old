@@ -45,14 +45,24 @@
 
 .Projects .home {
   position: absolute;
-  left: 0;
-  margin-left: 25px;
+  bottom: 0;
+  margin-bottom: 25px;
   cursor: pointer;
-  animation: bounce-left 1s infinite alternate;
+  animation: bounce-down 1s infinite alternate;
 }
 
 .Projects .home:hover {
   animation-play-state: paused;
+}
+
+@media (min-width: 992px) {
+  .Projects .home {
+    bottom: auto;
+    left: 0;
+    margin-bottom: auto;
+    margin-left: 25px;
+    animation: bounce-left 1s infinite alternate;
+  }
 }
 
 @keyframes slide-right {
@@ -68,6 +78,11 @@
 @keyframes bounce-left {
   from {margin-left: 25px;}
   to {margin-left: 15px;}
+}
+
+@keyframes bounce-down {
+  from {margin-bottom: 25px;}
+  to {margin-bottom: 15px;}
 }
 
 /*

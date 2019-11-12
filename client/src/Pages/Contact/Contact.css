@@ -60,14 +60,24 @@
 
 .Contact .home {
   position: absolute;
-  top: 0;
-  margin-top: 25px;
+  bottom: 0;
+  margin-bottom: 25px;
   cursor: pointer;
-  animation: bounce-up 1s infinite alternate;
+  animation: bounce-down 1s infinite alternate;
 }
 
 .Contact .home:hover {
   animation-play-state: paused;
+}
+
+@media (min-width: 992px) {
+  .Contact .home {
+    bottom: auto;
+    top: 0;
+    margin-bottom: auto;
+    margin-top: 25px;
+    animation: bounce-up 1s infinite alternate;
+  }
 }
 
 @keyframes slide-down {
@@ -88,6 +98,11 @@
 @keyframes bounce-up {
   from {margin-top: 25px;}
   to {margin-top: 15px;}
+}
+
+@keyframes bounce-down {
+  from {margin-bottom: 25px;}
+  to {margin-bottom: 15px;}
 }
 
 /*

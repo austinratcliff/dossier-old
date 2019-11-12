@@ -31,11 +31,19 @@ const Projects = props => {
               </span>
             </h2>
       }
-      <i
-        className="fas fa-angle-right fa-2x home"
-        title="home"
-        onClick={props.handleClick}
-      />
+      {
+        props.isMobile
+          ? <i
+              className="fas fa-angle-up fa-2x home"
+              title="home"
+              onClick={props.handleClick}
+            />
+          : <i
+              className="fas fa-angle-right fa-2x home"
+              title="home"
+              onClick={props.handleClick}
+            />
+      }
     </div>
   )
 }

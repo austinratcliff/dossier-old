@@ -71,11 +71,19 @@ const Contact = props => {
           </span>
         </a>
       </div>
-      <i
-        className="fas fa-angle-down fa-2x home"
-        title="home"
-        onClick={props.handleClick}
-      />
+      {
+        props.isMobile
+          ? <i
+              className="fas fa-angle-up fa-2x home"
+              title="home"
+              onClick={props.handleClick}
+            />
+          : <i
+              className="fas fa-angle-down fa-2x home"
+              title="home"
+              onClick={props.handleClick}
+            />
+      }
     </div>
   )
 }
