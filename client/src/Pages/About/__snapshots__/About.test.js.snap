@@ -2,20 +2,24 @@
 
 exports[`About component matches snapshot 1`] = `
 <div
-  className="About"
+  className="About container"
 >
-  <h1
-    className="header"
+  <div
+    className="v-center-header"
   >
-    <i
-      className="fas fa-user"
-      title="about"
-    />
-     About
-  </h1>
+    <h1
+      className="header"
+    >
+      <i
+        className="fas fa-user"
+        title="about"
+      />
+       About
+    </h1>
+  </div>
   <img
     alt="austin"
-    className="austin"
+    className="austin img-fluid"
     src="austin.png"
   />
   <div

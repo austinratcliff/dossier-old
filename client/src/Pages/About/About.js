@@ -1,20 +1,25 @@
 import React from 'react'
+import Container from 'react-bootstrap/Container'
+import Image from 'react-bootstrap/Image'
 import austin from './assets/austin.png'
 import './About.css'
 
 const About = props => {
   return (
-    <div className="About">
-      <h1 className="header">
-        <i
-          className="fas fa-user"
-          title="about"
-        /> About
-      </h1>
-      <img
+    <Container className="About">
+      <div className="v-center-header">
+        <h1 className="header">
+          <i
+            className="fas fa-user"
+            title="about"
+          /> About
+        </h1>
+      </div>
+      <Image
         className="austin"
         src={austin}
         alt="austin"
+        fluid
       />
       <div className="text">
         <h2 className="description">
@@ -41,7 +46,7 @@ const About = props => {
         title="home"
         onClick={props.handleClick}
       />
-    </div>
+    </Container>
   )
 }
 

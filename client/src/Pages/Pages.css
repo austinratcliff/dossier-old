@@ -13,14 +13,25 @@
   transition: transform 1s;
 }
 
-.Pages .about-exit,
+.Pages .about-exit {
+  transform: none;
+  height: auto;
+  overflow: hidden;
+}
+
+.Pages .about-exit-active {
+  transform: translate(0, -100%);
+  transition: transform 1s;
+  height: auto;
+  overflow: hidden;
+}
+
 .Pages .blog-exit,
 .Pages .contact-exit,
 .Pages .projects-exit {
   transform: none;
 }
 
-.Pages .about-exit-active,
 .Pages .blog-exit-active,
 .Pages .contact-exit-active,
 .Pages .projects-exit-active {
@@ -40,11 +51,13 @@
 
   .Pages .about-exit {
     transform: none;
+    height: 100vh;
   }
 
   .Pages .about-exit-active {
     transform: translate(0, -100%);
     transition: transform 1s;
+    height: 100vh;
   }
 
   .Pages .blog-enter {
