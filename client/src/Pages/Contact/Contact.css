@@ -20,32 +20,26 @@
 }
 
 .Contact .message {
-  transform: translate(-5vw, 0);
-  font-size: calc(10px + 2vmin);
   margin: 0;
   opacity: 0;
   visibility: hidden;
-  animation: fade-in-right 1s 2s 1 forwards;
+  animation: fade-in 1s 2s 1 forwards;
 }
 
 .Contact .contacts {
-  transform: translate(5vw, 0);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 30px 0 0 0;
   opacity: 0;
   visibility: hidden;
-  animation: fade-in-left 1s 2s 1 forwards;
-}
-
-.Contact .icon {
-  margin: 0 10px 0 20px;
+  animation: fade-in 1s 2s 1 forwards;
 }
 
 .Contact .contact {
   color: #111;
-  font-size: calc(10px + 1vmin);
+  margin: 15px 0;
   text-decoration: none;
 }
 
@@ -63,7 +57,6 @@
   bottom: 0;
   margin-bottom: 25px;
   cursor: pointer;
-  animation: bounce-down 1s infinite alternate;
 }
 
 .Contact .home:hover {
@@ -71,6 +64,14 @@
 }
 
 @media (min-width: 992px) {
+  .Contact .message {
+    font-size: calc(10px + 2vmin);
+  }
+
+  .Contact .contact {
+    font-size: calc(10px + 1vmin);
+  }
+
   .Contact .home {
     bottom: auto;
     top: 0;
@@ -80,9 +81,39 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .Contact .message {
+    transform: translate(-5vw, 0);
+    opacity: 0;
+    visibility: hidden;
+    animation: fade-in-right 1s 2s 1 forwards;
+  }
+
+  .Contact .contacts {
+    transform: translate(5vw, 0);
+    flex-direction: row;
+    opacity: 0;
+    visibility: hidden;
+    animation: fade-in-left 1s 2s 1 forwards;
+  }
+
+  .Contact .icon {
+    margin: 0 10px 0 20px;
+  }
+
+  .Contact .contact {
+    margin: 0;
+  }
+}
+
 @keyframes slide-down {
   from {transform: translateY(0);}
   to {transform: translateY(100vh);}
+}
+
+@keyframes fade-in {
+  from {opacity: 0; visibility: hidden;}
+  to {opacity: 1; visibility: visible;}
 }
 
 @keyframes fade-in-right {
