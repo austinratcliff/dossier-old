@@ -62,7 +62,6 @@
   bottom: 0;
   margin-bottom: 25px;
   cursor: pointer;
-  animation: bounce-down 1s infinite alternate;
 }
 
 .Blog .home:hover {
