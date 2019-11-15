@@ -26,9 +26,7 @@ const Projects = props => {
               { projects.map(project => <Project key={project._id} project={project} />) }
             </div>
           : <h2 className="zero-projects">
-              <span className="highlight">
-                No projects yet...
-              </span>
+              <i className="fas fa-circle-notch fa-2x fa-spin" />
             </h2>
       }
       {

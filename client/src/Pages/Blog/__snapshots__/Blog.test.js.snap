@@ -16,11 +16,9 @@ exports[`Blog component matches snapshot 1`] = `
   <h2
     className="zero-posts"
   >
-    <span
-      className="highlight"
-    >
-      No posts yet...
-    </span>
+    <i
+      className="fas fa-circle-notch fa-2x fa-spin"
+    />
   </h2>
   <i
     className="fas fa-angle-left fa-2x home"

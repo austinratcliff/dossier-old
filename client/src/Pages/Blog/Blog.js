@@ -38,9 +38,7 @@ const Blog = props => {
               </a>
             </div>
           : <h2 className="zero-posts">
-              <span className="highlight">
-                No posts yet...
-              </span>
+              <i className="fas fa-circle-notch fa-2x fa-spin" />
             </h2>
       }
       {

@@ -45,8 +45,7 @@
 }
 
 .Blog .zero-posts {
-  font-size: calc(10px + 2vmin);
-  margin: 0;
+  color: #111;
   opacity: 0;
   visibility: hidden;
   animation: fade-in 1s 2s 1 forwards;
